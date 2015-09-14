@@ -1,10 +1,7 @@
 data.dir    <- 'data/'
-user.balance.ori <- 'user_balance_table.csv'
-day.share.ori    <- 'mfd_day_share_interest.csv'
-bank.shibor.ori  <- 'mfd_bank_shibor.csv'
-user.balance.mod <- 'user_balance_table_mod.csv'
-day.share.mod    <- 'mfd_day_share_interest_mod.csv'
-bank.shibor.mod  <- 'mfd_bank_shibor_mod.csv'
+user.balance.ori <- paste(data.dir, 'user_balance_sum.csv',sep="")
+day.share.mod    <- paste(data.dir, 'mfd_day_share_interest_mod.csv',sep="")
+bank.shibor.mod  <- paste(data.dir, 'mfd_bank_shibor_mod.csv', sep="")
 
 
 result.dir  <- 'result/'
@@ -18,11 +15,11 @@ if(!file.exists(result.file)){
 }
 
 
-train.range <- seq( as.Date('2014-04-01'),as.Date('2014-08-31'), by = 1)
-pred.range  <- seq(as.Date('2014-09-01'), as.Date('2014-09-30'), by = 1)
-valid.range <- seq( as.Date('2014-04-01'),as.Date('2014-08-31'), by = 1)
+train.range <- seq( as.Date('2014-04-01'),as.Date('2014-07-31'), by = 1)
+pred.range  <- seq(as.Date('2014-08-01'), as.Date('2014-08-31'), by = 1)  #if pred.range  between 2013-07-01 and 2014-09-01, then we can gain validation result.
+# valid.range <- seq( as.Date('2014-04-01'),as.Date('2014-08-31'), by = 1)
 
 # other
 form = '%Y%m%d'  # time format 
 methods <- c( 'use.randomforest', 'use.nnet', 'use.glmnet','use.svm', 'use.lm', 'use.stlf', 'use.extraTrees', 'use.ridge', 'use.gbm', 'use.knn', 'use.rpart')
-features <- c('feature.week' )
+# features <- c('feature.week' )

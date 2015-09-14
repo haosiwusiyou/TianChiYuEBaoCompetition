@@ -1,1 +1,16 @@
-This is the R problem during my involvement in Tian Chi Time Series Competition.
+Short Description:
+This is the R problem during my involvement in Tian Chi Time Series Competition. Its procedure including feature engineering, feature selection, model training, model validation, model fusion.
+File Structure:
+the whole project including three folder, i.e. data(used to save input data), R(used to save R source code), result(used to save output result). Here is the details about R folder:
+tianchi.allone.R: It is the main function in this project, you can only run this code, and then you can find the final result in result folder.
+tianchi.configuration.R: It used to configure the basic parameters for this project
+tianchi.feature.engineering.R: It is the function used for feature engineering.
+tianchi.feature.selection.R: It is the function used for feature selection.
+tianchi.forecast.R: It is the collection of massive methods to train data.
+tianchi.postprocess.R: It is the function used to do model validation
+tianchi.validation.R: It is the specific methods to value the model accuracy
+tianchi.utils.R: Some util function for this project
+Run:
+setwd to the project root directory.
+then use command:  source("R/tianchi.allone.R")
+

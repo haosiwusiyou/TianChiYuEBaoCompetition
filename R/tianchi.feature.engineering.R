@@ -226,8 +226,8 @@ feature.holiday <- function(date.range,   need.before=T,   need.after=T, need.we
   # browser()
   return(importance.fes)
 }
-feature.interest <- function(interest.file ='data/mfd_day_share_interest_mod.csv' ,horizon = 30 ,model='ets' ){
-  interest.data <- read.csv(interest.file)[c('report_date','mfd_7daily_yield')]
+feature.interest <- function(horizon = 30 ,model='ets' ){
+  interest.data <- read.csv( day.share.mod )[c('report_date','mfd_7daily_yield')]
   interest.data[,1] <- as.Date(interest.data[,1])
   interest.t <- ts(interest.data[, 2], frequency = 7)
   interest.stlf.ets <- stlf(interest.t, h=horizon, s.window=15, method = model,ic='bic')
@@ -487,6 +487,7 @@ feature.selection <- function(train.purchase, train.){
 }
 
 feature.enginearing1 <- function(train.date.range, predict.date.range, ori.data){
+  # browser()
   train.begin <- min(train.date.range)
   train.end <- max(train.date.range)
   pred.begin <- min(predict.date.range)
@@ -681,8 +682,8 @@ get.ori.data <- function(train.file ){
 #   ori.data[, 3] <- purchase.model$fitted
   return(ori.data)
 }
-run.feature.engineering <- function(train.date.range, predict.date.range, train.file = 'data/p2_user_balance_sum.csv' ){
-  ori.data <- get.ori.data(train.file) 
+run.feature.engineering <- function(train.date.range, predict.date.range ){
+  ori.data <- get.ori.data( user.balance.ori ) 
   # browser()
   feature.data1 <- feature.enginearing1(train.date.range, predict.date.range, ori.data)
   # browser()
