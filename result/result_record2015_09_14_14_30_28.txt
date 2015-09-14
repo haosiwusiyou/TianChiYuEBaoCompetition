@@ -1,0 +1,42 @@
+use.lm
+month 8: 
+140.381568946138 
+total score 140.381568946138
+
+
+use.randomforest
+month 8: 
+140.937066934393 
+total score 140.937066934393
+
+
+use.glmnet
+month 8: 
+144.215348791728 
+total score 144.215348791728
+
+
+use.svm
+month 8: 
+140.113349761632 
+total score 140.113349761632
+
+
+use svm  +  random forest by averaging
+month 8: 
+145.905244032596 
+total score 145.905244032596
+
+
+use glmnet  + svm + random forest by averaging
+month 8: 
+147.502657879071 
+total score 147.502657879071
+
+
+svm + lm + randomforest + glmet by averaging
+month 8: 
+146.713022733386 
+total score 146.713022733386
+
+

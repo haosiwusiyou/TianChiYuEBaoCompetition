@@ -1,0 +1,42 @@
+use.lm
+month 9: 
+NA 
+total score NA
+
+
+use.randomforest
+month 9: 
+NA 
+total score NA
+
+
+use.glmnet
+month 9: 
+NA 
+total score NA
+
+
+use.svm
+month 9: 
+NA 
+total score NA
+
+
+use svm  +  random forest by averaging
+month 9: 
+NA 
+total score NA
+
+
+use glmnet  + svm + random forest by averaging
+month 9: 
+NA 
+total score NA
+
+
+svm + lm + randomforest + glmet by averaging
+month 9: 
+NA 
+total score NA
+
+
